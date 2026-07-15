@@ -1,12 +1,20 @@
-## UI Test Improvements and Local Verification
+## Local Execution and UI Test Improvements
 
-I separated FR-01 text-entry behaviour from FR-04 submission validation.
+I executed the TypeScript, API, and UI suites on my Windows environment.
 
-Changes made:
+During review, I identified that arbitrary text entry and invalid submission
+were being covered by the same test. I separated these concerns by adding a
+dedicated FR-01 test that verifies arbitrary text can be entered before
+validation.
 
-- Added a dedicated UI test confirming that arbitrary text can be entered before validation.
-- Strengthened the invalid-input test to verify that no persistence POST request is sent.
-- Updated requirement analysis and detailed test cases to reflect this distinction.
+I also strengthened the invalid-submission test by monitoring network traffic
+and verifying that invalid text does not produce a POST request to the
+persistence endpoint.
+
+This connects the tests more clearly to the requirements:
+
+- FR-01 verifies input capability.
+- FR-04 verifies validation and persistence behaviour.
 
 Local verification completed:
 

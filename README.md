@@ -145,6 +145,26 @@ This repository contains:
 
 The included JSON records the visible working interaction used for this generated repository. Before submission, add the platform's official full export or ensure the evaluator accepts the manually captured visible transcript. Do not claim that hidden system instructions or private model reasoning are part of the transcript.
 
+## Local Verification
+
+The project was verified locally on Windows using the following environment:
+
+- Operating system: Windows 10
+- Browser: Playwright Chromium
+- Node.js: `v24.18.0`
+- npm: `11.16.0`
+- Playwright: `Version 1.61.1`
+
+Verification results:
+
+- `npm run typecheck` — Passed
+- `npm run test:api` — `8` passed
+- `npm run test:ui` — `10` passed
+
+The UI suite includes an additional test separating arbitrary text entry
+under FR-01 from submission validation under FR-04. The invalid-input test
+also verifies that no persistence POST request is sent.
+
 ## References
 
 - Playwright Test documentation: https://playwright.dev/docs/intro
