@@ -12,7 +12,10 @@
     "test:debug": "playwright test --project=ui-chromium --debug",
     "report": "playwright show-report",
     "serve:mock": "node scripts/mock-server.cjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:ai-evidence": "node scripts/build-ai-evidence.cjs",
+    "validate:ai-evidence": "node scripts/validate-ai-evidence.cjs"
+
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
