@@ -1,0 +1,11 @@
+Create a submission-ready Git repository for the SatSure Autocomplete Form practical assignment.
+
+Use TypeScript and Playwright Test for UI and API tests. Use a Page Object Model, risk-based documentation, JSON-schema validation, BCP 47 validation, local IST timestamp validation, and negative API tests. Make endpoints configurable through environment variables. Because the example test.com URL is not a real provided environment, include a small local mock UI/API so the suite can be installed and executed by a reviewer, while clearly documenting that the mock is not the real system under test.
+
+Do not invent defects. In particular:
+- Distinguish BCP 47 syntax validity from environment-specific expected locale.
+- Calculate suggestion matches from the stated filtering rule.
+- Document ambiguous or contradictory requirements explicitly.
+- Do not assert that additional response properties are prohibited unless the requirement says so.
+
+Include README, requirement analysis, ranked scenarios, defect analysis, detailed cases, AI reflection, architecture discussion, prompts, and visible conversation transcript.
